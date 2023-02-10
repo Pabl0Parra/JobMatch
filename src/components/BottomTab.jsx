@@ -7,6 +7,7 @@ import Saved from "../screens/Saved";
 import Explore from "../screens/Explore";
 import Messages from "../screens/Messages";
 import Profile from "../screens/Profile";
+import Favorites from "../screens/Favorite";
 
 //icons
 import { MaterialIcons, Fontisto, FontAwesome5, MaterialCommunityIcons } from "@expo/vector-icons";
@@ -16,6 +17,7 @@ const Tab = createBottomTabNavigator();
 export default function BottomTab() {
   return (
     <Tab.Navigator
+      initialRouteName="Home"
       screenOptions={{
         tabBarActiveTintColor: "#1D8489",
         tabBarInactiveTintColor:"#C8CFCF",
@@ -53,6 +55,16 @@ export default function BottomTab() {
         options={{
           tabBarIcon: ({ color }) => (
             <Fontisto name="favorite" size={32} color={color} />
+          ),
+          headerShown: false
+        }}
+      />
+          <Tab.Screen
+        name="Favorites"
+        component={Favorites}
+        options={{
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="heart" size={32} color={color} />
           ),
           headerShown: false
         }}
