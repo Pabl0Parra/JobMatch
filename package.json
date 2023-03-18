@@ -2,6 +2,7 @@
   "name": "job-match",
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
+  "scheme": "job-match",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
@@ -20,6 +21,7 @@
     "axios": "^1.3.4",
     "expo": "~47.0.12",
     "expo-image-picker": "^14.0.2",
+    "expo-linking": "~3.3.1",
     "expo-status-bar": "~1.4.2",
     "firebase": "^9.17.1",
     "formik": "^2.2.9",
